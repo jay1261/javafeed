@@ -3,9 +3,11 @@ package com.sparta.javafeed.dto;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 @Getter
+@AllArgsConstructor
 public class SignupRequestDto {
     @NotBlank(message = "사용자 아이디를 입력해 주세요.")
     @Pattern(regexp = "^(?=.*[a-zA-Z])(?=.*[0-9])[a-zA-Z0-9]{10,20}$", message = "영문 대소문자와 숫자 조합만 가능하며, 10자 이상 20자 이하여야 합니다.")

@@ -3,9 +3,11 @@ package com.sparta.javafeed.dto;
 import com.sparta.javafeed.entity.User;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 @Getter
+@AllArgsConstructor
 public class UserInfoRequestDto {
     @NotBlank(message = "이름을 입력해 주세요.")
     private String name;
